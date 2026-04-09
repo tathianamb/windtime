@@ -445,7 +445,7 @@ async function startClassification() {
       document.getElementById('progress-label').textContent = `Extraindo… ${done}/${allRows.length}`;
       document.getElementById('btn-download').disabled = false;
       updateStats(); renderTable();
-      if (i + BATCH < allRows.length) await sleep(500);
+      if (i + BATCH < allRows.length) await sleep(15000);
     }
   } catch(e) { showToast('Erro: ' + e.message); }
 
